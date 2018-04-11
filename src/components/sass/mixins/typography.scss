@@ -1,0 +1,136 @@
+@mixin font-heading-title(){
+  font-family: 'AvenirNextLTW01-Regular',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+@mixin font-banner-header(){
+  font-family: 'AvenirNextLTW01-Regular', "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-stretch:condensed;
+  font-size: 48px;
+}
+
+@mixin font-heading-h1(){
+  font-family: 'AvenirNextLTW01-Regular',"HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 20px;
+}
+
+@mixin font-heading-h2(){
+  font-family: 'AvenirNextLTW01-Regular', "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 18px;
+}
+
+@mixin font-heading-h3(){
+  font-family: 'AvenirNextLTW01-Regular',"HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 13px;
+}
+
+@mixin font-heading-h4(){
+  font-family: 'AvenirNextLTW01-Regular', "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 12px;
+}
+
+@mixin font-heading-h5(){
+  font-family: 'AvenirNextLTW01-Regular',"HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 11px;
+}
+
+@mixin font-heading-h6(){
+  font-family: 'AvenirNextLTW01-Regular', "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 10px;
+}
+
+@mixin font-label-l1(){
+  font-family: 'AvenirNextLTW01-Regular', "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 13px;
+}
+
+
+@mixin font-label-l2(){
+  font-family: 'AvenirNextLTW01-Regular',"HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 12px;
+}
+
+@mixin font-label-l3(){
+  font-family: 'AvenirNextLTW01-Regular',"HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 11px;
+}
+
+@mixin font-label-l4(){
+  font-family: 'AvenirNextLTW01-Regular',"HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight:600;
+  font-size: 10px;
+}
+
+
+@mixin font-body-bd1(){
+  font-family: 'AvenirNextLTW01-Regular',"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:400;
+  font-size: 14px;
+}
+
+@mixin font-body-bd2(){
+  font-family: 'AvenirNextLTW01-Regular',"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:400;
+  font-size: 13px;
+}
+
+@mixin font-body-bd3(){
+  font-family: 'AvenirNextLTW01-Regular',"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:400;
+  font-size: 12px;
+}
+
+@mixin font-body-bd4(){
+  font-family: 'AvenirNextLTW01-Regular',"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:400;
+  font-size: 11px;
+}
+
+@mixin font-body-bd5(){
+  font-family: 'AvenirNextLTW01-Regular',"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:400;
+  font-size: 10px;
+}
+
+@mixin avenir-next-rg(){
+  font-family: 'AvenirNextLTW01-Regular';
+}
+
+@mixin avenir-next-dm(){
+  font-family: 'Avenir Next LT W01 Demi';
+}
+
+@mixin avenir-next-uli(){
+  font-family: 'AvenirNextLTW01-UltraLi';
+}
+
+@mixin avenir-next-th(){
+  font-family: 'Avenir Next W01 Thin';
+}
+
+@mixin avenir-next-md(){
+  font-family: 'AvenirNextLTW01-Medium';
+}
+
+@mixin avenir-next-bo(){
+  font-family: 'Avenir Next LT W01 Bold';
+}
+
+@mixin avenir-next-hv(){
+  font-family: 'AvenirNextLTW01-Heavy';
+}
+
+@mixin avenir-next-li(){
+  font-family: 'Avenir Next W01 Light';
+}

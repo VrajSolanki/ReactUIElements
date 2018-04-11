@@ -1,0 +1,84 @@
+//
+// Button variants
+// ==============================
+
+// Inspired by https://github.com/twbs/bootstrap
+
+
+// Fill
+
+@mixin button-variant($color, $background,$hoverBackground, $focusBackground,$focusBorder, $hoverColor) {
+  background-color: $background;
+  color: $color;;
+  outline: none;
+
+  &:hover{
+    background-color: $hoverBackground;
+    color: $hoverColor;
+  }
+  &:focus,
+  &:active{
+    background-color: $focusBackground;
+    color: $color;
+    border-color: $focusBorder;
+  }
+}
+
+
+
+// Hollow
+
+@mixin button-hollow-variant($color, $border) {
+  background: none;
+  border-color: $border;
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background-color: mix($border, $body-bg, 8%);
+    background-image: none;
+    border-color: darken($border, 10%);
+    color: $color;
+    outline: none;
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px fade($border, 10%);
+  }
+  &:active {
+    background-color: fade($border, 20%);
+    border-color: darken($border, 20%);
+    box-shadow: none;
+  }
+}
+
+
+
+// Link
+
+@mixin button-link-variant($color, $hover-color, $hover-decoration) {
+  color: $color;
+  font-weight: normal;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    box-shadow: none;
+    background-color: transparent;
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+    outline: none;
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $hover-color;
+    text-decoration: $hover-decoration;
+  }
+}

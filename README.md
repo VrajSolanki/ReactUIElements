@@ -1,2 +1,2 @@
-# ReactUIElements
-UI Elements for as components for React.
+npm i
+$ npm run storybook

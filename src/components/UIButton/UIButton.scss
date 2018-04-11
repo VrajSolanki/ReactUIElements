@@ -1,0 +1,685 @@
+@import "../sass/variables";
+@import "../sass/mixins/typography";
+
+.button{
+  cursor:pointer;
+  justify-content:center;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  border-radius: 18%/50%;
+  font-family: 'AvenirNextLTW01-Medium';
+}
+.greyboxclass{
+  composes:button;
+  font-size: 1rem;
+  background-color: $chalk;
+  color: black;
+  border: 2px solid $chalk;  
+  &:hover{
+    color: black;
+    background:  $smoke;
+    border: 2px solid $smoke;    
+  }
+  &:active{
+    color: black;
+    background-color:$chalk;
+    border: 2px solid $chrome;
+  }
+}
+
+.pinkboxclass{
+  composes:button;
+  font-size: 1rem;
+  background-color:$reddish-pink;
+  color:#FFF;
+  border: 2px solid $reddish-pink;  
+  &:hover{
+    background: #FF5475;
+    border: 2px solid #FF5475;    
+    color:#FFF;
+  }
+   &:active{
+     background: #FF5475;
+     border: 2px solid $reddish-pink;
+     color:#FFF;
+  }
+}
+
+.yellowboxclass{
+  background-color:#ff9944;
+  composes:button;
+  font-size: 1rem;
+  color: black;
+  border: 2px solid #ff9944;  
+  &:hover{
+    background: rgba(255,153,68,0.80);
+    border: 2px solid #ff9944;  
+  }
+  &:active{
+    background:rgba(255, 153, 68, 0.8);
+    border: 2px solid #FF9944;
+  }
+}
+
+.blueboxclass{
+  background-color: #007aff;
+  composes:button;
+  font-size: 1rem;
+  color:#FFF;
+  border: 2px solid #007aff; 
+  &:hover{
+    background: #2687FB;
+    border: 2px solid #2687FB;
+    color:#FFF;
+  }
+  &:active{
+    background: #2687FB;
+    border: 2px solid #2687FB;
+    color:#FFF;
+  }
+}
+
+.tealboxclass{
+  background-color: $teal;
+  composes:button;
+  font-size: 1rem;
+  color:#ffffff;
+  &:hover{
+    background: lighten($teal,7%);
+    border:0px;
+    color:#ffffff;
+  }
+  &:active{
+    background: #lighten($teal,7%);
+    border: 2px solid $teal;
+    color:#ffffff;
+  }
+}
+
+
+.redboxclass{
+  background-color: $red;
+  composes:button;
+  font-size: 1rem;
+  color:#ffffff;
+  &:hover{
+    background-color: lighten($red,7%);
+    border:0px;
+    color:#ffffff;
+  }
+  &:active{
+    background: #lighten($red,7%);
+    border: 2px solid $red;
+    color:#ffffff;
+  }
+}
+
+.dis_class{
+  composes:button;
+  cursor:not-allowed !important;
+}
+
+@mixin hollow_normal($color) {
+  background: none;
+  border:2px solid $color;
+  color: $color;
+}
+
+@mixin filled_disabled($color) {
+  @extend .dis_class;
+  background-color: lighten($color,25%);
+}
+
+@mixin hollow_disabled($color) {
+  @extend .dis_class;
+  background:none;
+  color: lighten($color,25%);
+  border: solid 2px lighten($color,25%);
+}
+
+//teal general styles
+.hollow_normal_teal{
+  @extend .tealboxclass;
+  @include hollow_normal($teal);
+}
+
+
+//red general styles
+
+.hollow_normal_red{
+  @extend .redboxclass;
+  @include hollow_normal($red);
+}
+
+.hollow_normal_pink{
+  @extend .pinkboxclass;
+  @include hollow_normal($reddish-pink);
+}
+
+.sm {
+  width: 112px;
+  height: 40px;
+  border-radius:18%/50%;
+  padding: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: hidden; // contain gradient on IE9
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-appearance: none;
+}
+
+.filled_normal_sm_teal
+{
+  @extend .tealboxclass;
+  @extend .sm;
+}
+
+.hollow_normal_sm_teal
+{
+  @extend .hollow_normal_teal;
+  @extend .sm;
+}
+
+.filled_normal_sm_red
+{
+  @extend .redboxclass;
+  @extend .sm;
+}
+
+.hollow_normal_sm_red
+{
+  @extend .hollow_normal_red;
+  @extend .sm;
+}
+
+.filled_normal_sm_grey{
+  @extend .greyboxclass;
+  @extend .sm;
+  color: black;
+}
+
+.hollow_normal_sm_grey{
+  @extend .greyboxclass;
+  @extend .sm;
+  background: none;
+  border:2px solid $chrome;
+  color:black;
+}
+
+.filled_normal_sm_pink{
+  @extend .pinkboxclass;
+  @extend .sm;
+  color: #ffffff;
+}
+
+.hollow_normal_sm_pink{
+  @extend .hollow_normal_pink;
+  @extend .sm;
+}
+
+.filled_normal_sm_yellow{
+  @extend .yellowboxclass;
+  @extend .sm;
+  color: black;
+}
+
+.hollow_normal_sm_yellow{
+  @extend .yellowboxclass;
+  @extend .sm;
+  background: none;
+  border:2px solid #ff9944;
+  color: #2a2932;
+}
+
+.filled_normal_sm_blue{
+  @extend .blueboxclass;
+  @extend .sm;
+  color: #ffffff;
+}
+
+.hollow_normal_sm_blue{
+  @extend .blueboxclass;
+  @extend .sm;
+  background: none;
+  border:2px solid #007aff;
+  color: $granite;
+}
+
+.filled_disabled_sm_grey{
+  @extend .dis_class;
+  @extend .sm;
+  color: $soapstone;
+  background-color: $chrome;
+}
+
+.hollow_disabled_sm_grey{
+  @extend .dis_class;
+  @extend .sm;
+  background:none;
+  color: $smoke;
+  border:2px solid #d7d7db;
+}
+
+.filled_disabled_sm_pink{
+  @extend .dis_class;
+  @extend .sm;
+  color:rgba(0,0,0,0.60);
+  background-color: rgba(255, 45, 85, 0.4);
+}
+
+.hollow_disabled_sm_pink{
+  @extend .dis_class;
+  @extend .sm;
+  background:none;
+  color: #d7d7db;
+  border: solid 2px rgba(255, 45, 85, 0.4);
+}
+
+.filled_disabled_sm_teal
+{
+  @include filled_disabled($teal);
+  @extend .sm;
+}
+
+.hollow_disabled_sm_teal
+{
+  @include hollow_disabled($teal);
+  @extend .sm;
+}
+
+.filled_disabled_sm_red
+{
+
+  @include filled_disabled($red);
+  @extend .sm;
+}
+
+.hollow_disabled_sm_red
+{
+  @include hollow_disabled($red);
+  @extend .sm;
+}
+
+.filled_disabled_sm_yellow{
+  @extend .dis_class;
+  @extend .sm;
+  color:rgba(0, 0, 0, 0.6);
+  background-color:rgba(255, 153, 68, 0.5);
+}
+.hollow_disabled_sm_yellow
+{
+  @extend .dis_class;
+  @extend .sm;
+  background:none;
+  color: $smoke;
+  border: solid 2px rgba(255, 153, 68, 0.5);
+}
+.filled_disabled_sm_blue
+{
+  @extend .dis_class;
+  @extend .sm;
+  color:#FFF;
+  background-color: rgba(0, 122, 255, 0.5);
+}
+.hollow_disabled_sm_blue
+{
+  @extend .dis_class;
+  @extend .sm;
+  background-color:#FFF;
+  color: #d7d7db;
+  border: solid 2px rgba(0, 122, 255, 0.4);
+}
+
+.md {
+  width:120px;
+  height:40px;
+  border-radius:18%/50%;
+  padding: 18px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  overflow: hidden; // contain gradient on IE9
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-appearance: none;
+}
+.filled_normal_md_grey
+{
+  @extend .greyboxclass;
+  @extend .md;
+  color: black;
+}
+.hollow_normal_md_grey
+{
+  @extend .greyboxclass;
+  @extend .md;
+  background: none;
+  border:2px solid $chrome;
+  color:black;
+}
+.filled_normal_md_pink
+{
+  @extend .pinkboxclass;
+  @extend .md;
+  color: #ffffff;
+}
+
+.hollow_normal_md_pink
+{
+  @extend .hollow_normal_pink;
+  @extend .md;
+}
+
+.filled_normal_md_teal
+{
+  @extend .tealboxclass;
+  @extend .md;
+}
+
+.hollow_normal_md_teal
+{
+  @extend .hollow_normal_teal;
+  @extend .md;
+}
+
+.filled_normal_md_red
+{
+  @extend .redboxclass;
+  @extend .md;
+}
+
+.hollow_normal_md_red
+{
+  @extend .hollow_normal_red;
+  @extend .md;
+}
+
+.filled_normal_md_yellow
+{
+  @extend .yellowboxclass;
+  @extend .md;
+  color: black;
+}
+.hollow_normal_md_yellow
+{
+  @extend .yellowboxclass;
+  @extend .md;
+  background: none;
+  border:2px solid #ff9944;
+  color: #2a2932;
+}
+.filled_normal_md_blue
+{
+  @extend .blueboxclass;
+  @extend .md;
+  color: #ffffff;
+}
+.hollow_normal_md_blue
+{
+  @extend .blueboxclass;
+  @extend .md;
+  background: none;
+  border:2px solid #007aff;
+  color: $granite;
+}
+
+.filled_disabled_md_grey
+{
+  @extend .dis_class;
+  @extend .md;
+  color: $soapstone;
+  background-color: $chrome;
+}
+.hollow_disabled_md_grey
+{
+  @extend .dis_class;
+  @extend .md;
+  background:none;
+  color: $smoke;
+  border:2px solid #d7d7db;
+}
+.filled_disabled_md_pink
+{
+  @extend .dis_class;
+  @extend .md;
+  color:rgba(0,0,0,0.60);
+  background-color: rgba(255, 45, 85, 0.4);
+}
+.hollow_disabled_md_pink
+{
+  @extend .dis_class;
+  @extend .md;
+  background:none;
+  color: #d7d7db;
+  border: solid 2px rgba(255, 45, 85, 0.4);
+}
+
+.filled_disabled_md_teal
+{
+  @include filled_disabled($teal);
+  @extend .md;
+}
+
+.hollow_disabled_md_teal
+{
+  @include hollow_disabled($teal);
+  @extend .md;
+}
+
+.filled_disabled_md_red
+{
+  @include filled_disabled($red);
+  @extend .md;
+}
+
+.hollow_disabled_md_red
+{
+  @include hollow_disabled($red);
+  @extend .md;
+}
+
+.filled_disabled_md_yellow
+{
+  @extend .dis_class;
+  @extend .md;
+  color:rgba(0, 0, 0, 0.6);
+  background-color:rgba(255, 153, 68, 0.5);
+}
+.hollow_disabled_md_yellow
+{
+  @extend .dis_class;
+  @extend .md;
+  background:none;
+  color: $smoke;
+  border: solid 2px rgba(255, 153, 68, 0.5);
+}
+
+.filled_disabled_md_blue
+{
+  @extend .dis_class;
+  @extend .md;
+  color:#FFF;
+  background-color: rgba(0, 122, 255, 0.5);
+}
+.hollow_disabled_md_blue
+{
+  @extend .dis_class;
+  @extend .md;
+  background-color:#FFF;
+  color: #d7d7db;
+  border: solid 2px rgba(0, 122, 255, 0.4);
+}
+
+.lg {
+  height:48px;
+  width:144px;
+  font-size: 1.4rem;
+  composes:button;
+}
+.filled_normal_lg_grey
+{
+  @extend .greyboxclass;
+  @extend .lg;
+  color: black;
+}
+.hollow_normal_lg_grey
+{
+  @extend .greyboxclass;
+  @extend .lg;
+  background: none;
+  border:2px solid $chrome;
+  color:black;
+}
+.filled_normal_lg_pink
+{
+  @extend .pinkboxclass;
+  @extend .lg;
+  color: #ffffff;
+}
+.hollow_normal_lg_pink
+{
+  @extend .lg;
+  @extend .hollow_normal_pink;
+}
+.filled_normal_lg_yellow
+{
+  @extend .yellowboxclass;
+  @extend .lg;
+  color: black;
+}
+.hollow_normal_lg_yellow
+{
+  @extend .yellowboxclass;
+  @extend .lg;
+  background: none;
+  border:2px solid #ff9944;
+  color: #2a2932;
+}
+.filled_normal_lg_blue
+{
+  @extend .blueboxclass;
+  @extend .lg;
+  color: #ffffff;
+}
+.hollow_normal_lg_blue
+{
+  @extend .blueboxclass;
+  @extend .lg;
+  background: none;
+  border:2px solid #007aff;
+  color: $granite;
+}
+.filled_normal_lg_teal
+{
+  @extend .tealboxclass;
+  @extend .lg;
+}
+
+.hollow_normal_lg_teal
+{
+  @extend .hollow_normal_teal;
+  @extend .lg;
+}
+
+.filled_normal_lg_red
+{
+  @extend .redboxclass;
+  @extend .lg;
+}
+
+.hollow_normal_lg_red
+{
+  @extend .hollow_normal_red;
+  @extend .lg;
+}
+.filled_disabled_lg_grey{
+  @extend .dis_class;
+  @extend .lg;
+  color: $soapstone;
+  background-color: $chrome;
+}
+.hollow_disabled_lg_grey{
+  @extend .dis_class;
+  @extend .lg;
+  background:none;
+  color: $smoke;
+  border:2px solid #d7d7db;
+}
+.filled_disabled_lg_pink{
+  @extend .dis_class;
+  @extend .lg;
+  color:rgba(0,0,0,0.60);
+  background-color: rgba(255, 45, 85, 0.4);
+}
+.hollow_disabled_lg_pink{
+  @extend .dis_class;
+  @extend .lg;
+  background:none;
+  color: #d7d7db;
+  border: solid 2px rgba(255, 45, 85, 0.4);
+}
+.filled_disabled_lg_yellow{
+  @extend .dis_class;
+  @extend .lg;
+  color:rgba(0, 0, 0, 0.6);
+  background-color:rgba(255, 153, 68, 0.5);
+}
+.hollow_disabled_lg_yellow{
+  @extend .dis_class;
+  @extend .lg;
+  background:none;
+  color: $smoke;
+  border: solid 2px rgba(255, 153, 68, 0.5);
+}
+.filled_disabled_lg_blue{
+  @extend .dis_class;
+  @extend .lg;
+  color:#FFF;
+  background-color: rgba(0, 122, 255, 0.5);
+}
+.hollow_disabled_lg_blue{
+  @extend .dis_class;
+  @extend .lg;
+  background-color:#FFF;
+  color: #d7d7db;
+  border: solid 2px rgba(0, 122, 255, 0.4);
+}
+.filled_disabled_lg_teal
+{
+  @include filled_disabled($teal);
+  @extend .lg;
+}
+
+.hollow_disabled_lg_teal
+{
+  @include hollow_disabled($teal);
+  @extend .lg;
+}
+
+.filled_disabled_lg_red
+{
+  @include filled_disabled($red);
+  @extend .lg;
+}
+
+.hollow_disabled_lg_red
+{
+  @include hollow_disabled($red);
+  @extend .lg;
+}
+
+
+
+.label{
+  @include avenir-next-md();
+  align-self: center;
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+  text-overflow: ellipsis;
+}
