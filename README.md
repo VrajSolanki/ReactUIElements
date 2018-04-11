@@ -1,8 +1,8 @@
 It includes various UIElements as components for React.
 
-For a local Demo: 
-npm i
-npm run storybook
+For a local Demo: <br /> 
+npm i<br />
+npm run storybook<br />
 
-To use a component
-import ProgressBar from '../components/ProgressBar';
+To use a component<br />
+import ProgressBar from '../components/ProgressBar';<br />
