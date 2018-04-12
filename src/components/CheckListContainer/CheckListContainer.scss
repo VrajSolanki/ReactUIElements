@@ -1,0 +1,30 @@
+@import "../sass/variables";
+@import "../sass/mixins/typography";
+
+.container{
+  display: flex;
+  width:100%;
+  flex-direction: column;
+}
+.checkListContainer{
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.label{
+  display: flex;
+  flex-basis: 25%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.error{
+  display: flex;
+  flex-grow: 0;
+  font-size: 1.3rem;
+  color:$error;
+  margin-top: 6px;
+  height: 16px;
+}
