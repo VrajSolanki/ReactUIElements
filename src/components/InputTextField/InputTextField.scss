@@ -1,0 +1,42 @@
+@import "../sass/variables";
+@import "../sass/mixins/typography";
+.container{
+  display: flex;
+  flex: 1;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.inputText{
+  width:100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  resize: none;
+  outline: none;
+  padding-top: 8px;
+  background-color:inherit;
+  padding-bottom: 14px;
+}
+.disabledInputBox {
+  composes: inputText;
+  border: none;
+  color: black;
+}
+
+.errorBorder{
+  border-bottom: 1px solid $error;
+}
+.inputLabel{
+  font-family: "AvenirNextLTW01-DemiCn";
+  font-size: 1.6rem;
+  color:black;
+  letter-spacing: 0.02rem;
+}
+.error{
+  display: flex;
+  flex-grow: 0;
+  font-size: 1.3rem;
+  color:$error;
+  margin-top: 6px;
+  height: 16px;
+}

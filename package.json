@@ -19,6 +19,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
+    "@storybook/addon-console": "^1.0.0",
     "@storybook/react": "^3.4.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7"
